@@ -11,6 +11,7 @@ public class PlayerMovementAdvanced : MonoBehaviour
     public float slideSpeed;
     public float wallrunSpeed;
     public float climbSpeed;
+    public float swingSpeed;
 
     public float dashSpeed;
     public float dashSpeedChangeFactor;
@@ -79,6 +80,7 @@ public class PlayerMovementAdvanced : MonoBehaviour
         dashing,
         crouching,
         sliding,
+        swinging,
         air
     }
 
@@ -89,6 +91,7 @@ public class PlayerMovementAdvanced : MonoBehaviour
     public bool dashing;
     public bool freeze;
     public bool activeGrapple;
+    public bool swinging;
 
     private void Start()
     {
@@ -155,9 +158,17 @@ public class PlayerMovementAdvanced : MonoBehaviour
 
     private void StateHandler()
     {
+        //Mode - Swinging
+
+        if (swinging)
+        {
+            state = MovementState.swinging;
+            moveSpeed = swingSpeed;
+
+        }
 
         //Mode - Freeze
-        if (freeze)
+        else if (freeze)
         {
             state = MovementState.freeze;
             moveSpeed = 0;

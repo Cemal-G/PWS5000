@@ -8,7 +8,7 @@ public class SwingingDone : MonoBehaviour
     public LineRenderer lr;
     public Transform gunTip, cam, player;
     public LayerMask whatIsGrappleable;
-    public PlayerMovementGrappling pm;
+    public PlayerMovementAdvanced pm;
 
     [Header("Swinging")]
     private float maxSwingDistance = 25f;
@@ -31,7 +31,7 @@ public class SwingingDone : MonoBehaviour
     public KeyCode swingKey = KeyCode.Mouse0;
 
 
-    private void Update()
+    private void Update() //dit zorgt voor dat er constant opnieuw gecheckt wordt wat de "prediction" is, zodat het rode stip smooth met je mee beweegt!
     {
         if (Input.GetKeyDown(swingKey)) StartSwing();
         if (Input.GetKeyUp(swingKey)) StopSwing();
@@ -46,7 +46,12 @@ public class SwingingDone : MonoBehaviour
         DrawRope();
     }
 
-    private void CheckForSwingPoints()
+
+    //wat dit doet in het kort, dit zorgt ervoor dat er een "prediction point" (rode stip) op het puint komt waar je grapple hook komt. 
+    //dit wordt slim bepaald door een direct raycast (precies waar men naar kijkt) als het object in directe contact zit met je cursor (midden van het scherm)
+    //is dit niet het geval gebruik ik een indirect raycast wat dus een sphere cast is (een rondje om je cursor heen)
+    //nu heb je dus de prediction precies waar je kijkt als het object wat je grappled precies is wat je mikt en anders gebruiken wij simpel weg een sphere!
+    private void CheckForSwingPoints() 
     {
         if (joint != null) return;
 
