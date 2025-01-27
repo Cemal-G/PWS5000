@@ -1716,7 +1716,7 @@ MonoBehaviour:
   player: {fileID: 1989261027}
   whatIsGrappleable:
     serializedVersion: 2
-    m_Bits: 1552
+    m_Bits: 1616
   pm: {fileID: 1989261029}
   orientation: {fileID: 1561914917}
   rb: {fileID: 1989261028}
