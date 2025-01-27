@@ -1464,6 +1464,7 @@ GameObject:
   - component: {fileID: 1989261034}
   - component: {fileID: 1989261035}
   - component: {fileID: 1989261036}
+  - component: {fileID: 1989261037}
   m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
@@ -1829,6 +1830,58 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
+--- !u!114 &1989261037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1989261026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39b972e66400845448f07ae616977849, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grapplingGun: {fileID: 1989261034}
+  quality: 500
+  damper: 14
+  strength: 800
+  velocity: 15
+  waveCount: 3
+  waveHeight: 1
+  affectCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0.92384815
+      outSlope: 0.92384815
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.60553354
+    - serializedVersion: 3
+      time: 0.13256833
+      value: 1.0579834
+      inSlope: 0.18527004
+      outSlope: 0.18527004
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: -0.06684492
+      outSlope: -0.06684492
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
