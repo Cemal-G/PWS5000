@@ -40,11 +40,7 @@ public class Grappling : MonoBehaviour
             grapplingCdTimer -= Time.deltaTime;
     }
 
-    private void LateUpdate()
-    {
-         if (grappling)
-            lr.SetPosition(0, gunTip.position);
-    }
+   
 
     private void StartGrapple()
     {
