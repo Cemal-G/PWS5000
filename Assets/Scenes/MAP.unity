@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028373, g: 0.22571398, b: 0.30692294, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -995,7 +995,7 @@ GameObject:
   - component: {fileID: 767052348}
   m_Layer: 0
   m_Name: Weapon
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1030,17 +1030,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 984023189541870072, guid: 70ec7ee37820c4229a19a1edd31db121, type: 3}
-  shootForce: 300
+  shootForce: 70
   upwardForce: 0
-  timeBetweenShooting: 0.1
-  spread: 3
+  timeBetweenShooting: 0.2
+  spread: 2
   reloadTime: 1.5
   timeBetweenShots: 0
   magazineSize: 25
   bulletsPerTap: 1
   allowButtonHold: 1
   playerRb: {fileID: 1989261028}
-  recoilForce: 0
+  recoilForce: 10
   fpsCam: {fileID: 963194227}
   attackPoint: {fileID: 1704932667}
   muzzleFlash: {fileID: 1000010254994808, guid: 9defeac88977c0d448aa4541073ee9e4, type: 3}

@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: 8184667315045048448}
   - component: {fileID: 924506574999893573}
   - component: {fileID: -3080434654433620476}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BasicBullet
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -152,13 +152,13 @@ MonoBehaviour:
   whatIsEnemies:
     serializedVersion: 2
     m_Bits: 128
-  bounciness: 0.8
+  bounciness: 0.104
   useGravity: 1
   explosionDamage: 40
-  explosionRange: 3
+  explosionRange: 1
   explosionForce: 0
-  maxCollisions: 10
-  maxLifetime: 0
+  maxCollisions: 0
+  maxLifetime: 4
   explodeOnTouch: 1
 --- !u!96 &-3080434654433620476
 TrailRenderer:
@@ -181,7 +181,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 0b6147f01c5daec4bb135d82077bc750, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -202,11 +202,11 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 5
+  m_Time: 1
   m_PreviewTimeScale: 1
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 1
+    widthMultiplier: 0.1
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -251,7 +251,7 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 1, b: 1, a: 1}
+      key0: {r: 1, g: 0, b: 0, a: 1}
       key1: {r: 1, g: 1, b: 1, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
@@ -276,7 +276,7 @@ TrailRenderer:
       atime6: 0
       atime7: 0
       m_Mode: 0
-      m_ColorSpace: -1
+      m_ColorSpace: 0
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
     numCornerVertices: 0
