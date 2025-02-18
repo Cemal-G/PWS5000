@@ -10,7 +10,7 @@ using TMPro;
 /// or use the #coding-problems channel of my discord server
 /// 
 /// Dave
-public class ProjectileGunTutorial : MonoBehaviour
+public class ProjectileGun : MonoBehaviour
 {
     //bullet 
     public GameObject bullet;
